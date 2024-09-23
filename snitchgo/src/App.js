@@ -1,7 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { Dashboard } from "./pages/Dashboard";
-import Profile from "./pages/Profile";
+import { Dashboard } from "./components/Dashboard";
 
 function App() {
   return (
