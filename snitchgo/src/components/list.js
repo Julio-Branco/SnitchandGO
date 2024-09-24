@@ -17,9 +17,9 @@ export default function list(){
                     
                 </div>
                 <div>
-                    <h2>{data.personnes[0].prenom} {data.personnes[0].nom}</h2>
+                    <h3>{data.personnes[0].prenom} {data.personnes[0].nom}</h3>
                 </div>
-                <div>                    
+                <div>
                     <h2>{data.personnes[0].score}</h2>
                 </div>
             </div>

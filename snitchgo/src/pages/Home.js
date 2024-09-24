@@ -12,7 +12,6 @@ export const Home = () => {
                         <Ranking />
                     </div>
                     <div className="col-6 my-4 h-75" style={{ background: "#EAEAEB", "border-radius": '15px', 'box-shadow': 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}>
-                        <Historique />
                     </div>
                 </div>
             </div >
