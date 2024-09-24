@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { ReactComponent as Logo } from "../logo.svg";
 import "../Styles/style.css";
 import { NavLink, useLocation } from "react-router-dom";
-
+import Profile from "../pages/Profile";
 export const Navbar = () => {
 	const location = useLocation();
+
 	return (
 		<div
 			className="navbar navbar-expand-lg navbar-light"
@@ -64,9 +66,9 @@ export const Navbar = () => {
 				<div className="me-4">
 					<button
 						type="button"
-						data-toggle="modal"
-						data-target="/Profile"
 						className="profilebutton"
+						data-bs-toggle="modal"
+						data-bs-target="#Modal"
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
@@ -83,6 +85,41 @@ export const Navbar = () => {
 							/>
 						</svg>
 					</button>
+					<div
+						className="modal fade"
+						id="Modal"
+						tabIndex="-1"
+						aria-labelledby="profileModalLabel"
+						aria-hidden="true"
+					>
+						<div className="modal-dialog">
+							<div className="modal-content">
+								<div className="modal-header">
+									<h5 className="modal-title" id="profileModalLabel">
+										Profil Utilisateur
+									</h5>
+									<button
+										type="button"
+										className="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div className="modal-body">
+									<Profile id="2" />
+								</div>
+								<div className="modal-footer">
+									<button
+										type="button"
+										className="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Fermer
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
