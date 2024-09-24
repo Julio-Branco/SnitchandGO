@@ -1,6 +1,7 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {Home} from './pages/Home';
-import {Classe} from './pages/Classe'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Home } from "./pages/Home";
+import { Classe } from "./pages/Classe";
+import { Leaderboardrank } from "./pages/Leaderboardrank";
 
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/Home" element={<Home />} />
           <Route path="/Classe" element={<Classe />} />
+          <Route path="/Leaderboardrank" element={<Leaderboardrank />} />
         </Routes>
       </div>
     </Router>
