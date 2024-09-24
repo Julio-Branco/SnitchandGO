@@ -35,5 +35,61 @@
       "score": 63,
       "pp": "../img/Luther.jpg"
     }
+  ],
+  "reports": [
+    {
+      "name": "John",
+      "firstname": "Doe",
+      "date": "2024-09-24 11:10:45",
+      "typeReport": "R",
+      "nbVote": 3,
+      "cours": "Python",
+      "display": "y"
+    },
+    {
+      "name": "Jane",
+      "firstname": "Smith",
+      "date": "2024-09-23 14:15:20",
+      "typeReport": "A",
+      "nbVote": 5,
+      "cours": "JavaScript",
+      "display": "y"
+    },
+    {
+      "name": "Emily",
+      "firstname": "Jones",
+      "date": "2024-09-22 09:05:33",
+      "typeReport": "R",
+      "nbVote": 2,
+      "cours": "React",
+      "display": "n"
+    },
+    {
+      "name": "Michael",
+      "firstname": "Brown",
+      "date": "2024-09-21 16:45:12",
+      "typeReport": "A",
+      "nbVote": 7,
+      "cours": "Machine Learning",
+      "display": "y"
+    },
+    {
+      "name": "Sarah",
+      "firstname": "Lee",
+      "date": "2024-09-20 13:30:25",
+      "typeReport": "R",
+      "nbVote": 4,
+      "cours": "HTML & CSS",
+      "display": "y"
+    },
+    {
+      "name": "James",
+      "firstname": "Taylor",
+      "date": "2024-09-19 10:20:35",
+      "typeReport": "A",
+      "nbVote": 6,
+      "cours": "Data Science",
+      "display": "y"
+    }
   ]
 }

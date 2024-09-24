@@ -27,6 +27,24 @@
 	background-color: #c32d2d;
 }
 
+.second-btn {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #7b7b7b;
+	color: #fff;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	padding: 0;
+}
+
+.second-btn:hover {
+	background-color: #7b7b7b80;
+}
+
 .nav-item {
 	padding: 0 20px;
 	margin: 0 20px;
