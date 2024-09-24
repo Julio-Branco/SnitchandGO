@@ -6,10 +6,10 @@ export const Navbar = () => {
   const location = useLocation();
 
   return (
-    <div className='navbar navbar-expand-lg navbar-light' style={{ background: '#EAEAEB', height:'11vh'}}>
-      <div className="flex flex-row justify-content-around mx-3">
+    <div className='navbar navbar-expand-lg navbar-light' style={{ background: '#EAEAEB', height: '11vh'}}>
+      <div className="flex flex-row mx-3">
 
-        <a className='navbar-brand flex justify-content-between' href="/Home">
+        <a className='navbar-brand flex w-100 justify-content-between' href="/Home">
           <Logo className="mx-3" style={{ width: '45px' }} />
           <b>Snitch and Go</b>
         </a>
@@ -20,7 +20,7 @@ export const Navbar = () => {
       </button>
 
       <div className="ms-3 collapse navbar-collapse" id="navbarSupportedContent">
-        <ul className="navbar-nav ps-4 w-100 align-items-start">
+        <ul className="navbar-nav ps-1 w-100 align-items-start">
           <li className={`nav-item ${location.pathname === '/Home'|'/' ? 'active' : ''}`}>
             <NavLink className="nav-link my-link" to="/Home">Home</NavLink>
           </li>
