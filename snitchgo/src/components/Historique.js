@@ -27,9 +27,10 @@ export default function Historique() {
     };
 
     return (
-        <div style={{ overflowY: 'scroll', height: '500px', padding: '10px' }}>
-            <h1>Dénonciations</h1>
-            <hr className='w-100 d-flex justify-self-center' style={{ color: "#F43535" }} />
+        <>
+        <h1>Dénonciations</h1>
+        <hr className='w-100 d-flex justify-self-center' style={{ color: "#F43535" }} />
+        <div style={{ overflowY: 'scroll', height: '80%', padding: '20px', 'margin-bottom': '15px'}}>
             {reports.map((report, index) => (
                 <div key={index} style={{ marginBottom: '20px' }}>
                     <Report
@@ -47,5 +48,7 @@ export default function Historique() {
                 </div>
             ))}
         </div>
+        </>
+        
     );
 }
