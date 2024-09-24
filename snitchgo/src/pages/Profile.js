@@ -2,7 +2,6 @@ import "../Styles/Profile.css";
 import Nav from "../components/Navbar";
 import data from "../../public/Data.json";
 
-
 function Picture(props) {
   return (
     <img
@@ -12,13 +11,12 @@ function Picture(props) {
     />
   );
 }
+const firstperson = data.personnes[0];
 
 function Profile() {
   return (
     <>
-      <div className="profilePic">
-        <Picture ProfilePic= />
-      </div>
+      <div className="profilePic"></div>
     </>
   );
 }
