@@ -1,12 +1,18 @@
-import './App.css';
-import { Dashboard } from './components/Dashboard';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {Home} from './pages/Home';
+import {Classe} from './pages/Classe'
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <Dashboard />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Classe" element={<Classe />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
