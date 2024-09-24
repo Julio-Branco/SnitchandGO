@@ -1,6 +1,6 @@
 import "../Styles/Profile.css";
 import Nav from "../components/Navbar";
-import data from "../../public/Data.json";
+import data from "../Data/Data.json";
 
 
 function Picture(props) {
@@ -17,7 +17,7 @@ function Profile() {
   return (
     <>
       <div className="profilePic">
-        <Picture ProfilePic= />
+       
       </div>
     </>
   );
