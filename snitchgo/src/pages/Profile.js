@@ -17,7 +17,7 @@ function Profile() {
   return (
     <>
       <div className="profilePic">
-        <Picture ProfilePic={} />
+        <Picture ProfilePic= />
       </div>
     </>
   );
