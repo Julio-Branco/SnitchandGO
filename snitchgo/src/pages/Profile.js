@@ -12,7 +12,7 @@ function Picture(props) {
     />
   );
 }
-const firstperson = data.personnes[0];
+const firstperson = data.personnes[4];
 
 function Profile() {
   return (
