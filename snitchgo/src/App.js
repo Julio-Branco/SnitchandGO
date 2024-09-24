@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {Home} from './pages/Home';
 import {Classe} from './pages/Classe'
+
+import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
+
     <Router>
       <div className="App">
         <Routes>
