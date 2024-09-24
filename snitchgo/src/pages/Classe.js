@@ -1,9 +1,9 @@
-import { Dashboard } from "../components/Dashboard"
+import { Navbar } from "../components/Navbar"
 
 export const Classe = () => {
     return (
         <>
-            <Dashboard/>
+            <Navbar/>
         </>
     )
 }
