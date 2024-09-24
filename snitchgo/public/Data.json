@@ -1,0 +1,29 @@
+{
+  "personnes": [
+    {
+      "nom": "Dupont",
+      "prenom": "Jean",
+      "score": 45
+    },
+    {
+      "nom": "Martin",
+      "prenom": "Lucie",
+      "score": -12
+    },
+    {
+      "nom": "Durand",
+      "prenom": "Paul",
+      "score": 87
+    },
+    {
+      "nom": "Moreau",
+      "prenom": "Sophie",
+      "score": -25
+    },
+    {
+      "nom": "Lefevre",
+      "prenom": "Emilie",
+      "score": 63
+    }
+  ]
+}

@@ -6,7 +6,7 @@ import Profile from "./pages/Profile";
 function App() {
   return (
     <div className="App">
-      <Dashboard />
+      <Profile />
     </div>
   );
 }

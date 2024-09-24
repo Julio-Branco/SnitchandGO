@@ -14,7 +14,7 @@ function Picture(props) {
 function Profile() {
   return (
     <>
-      <div className="Test"></div>
+      <div className="profilePic"> </div>
     </>
   );
 }
