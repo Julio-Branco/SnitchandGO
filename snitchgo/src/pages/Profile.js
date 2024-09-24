@@ -16,7 +16,9 @@ const firstperson = data.personnes[0];
 function Profile() {
   return (
     <>
-      <div className="profilePic"></div>
+      <div className="profilePic">
+        <img src={firstperson.pp}></img>
+      </div>
     </>
   );
 }
