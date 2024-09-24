@@ -11,15 +11,14 @@ export default function list(){
     function Item(){
         return (
             <div className="userCard">
+                <h1>1°</h1>
                 <div className="picture">
-                    <img src={data.personnes[0].pp} className="rounded-circle" alt="" />
+                    <img src={data.personnes[0].pp} alt="" />
 
                     
                 </div>
-                <div>
+                <div className="userName">
                     <h3>{data.personnes[0].prenom} {data.personnes[0].nom}</h3>
-                </div>
-                <div>
                     <h2>{data.personnes[0].score}</h2>
                 </div>
             </div>
