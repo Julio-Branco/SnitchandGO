@@ -1,5 +1,5 @@
-import React from 'react'
-import Report from './Report'
+import React from "react";
+import Report from "./Report";
 
 export default function Historique(){
     return (

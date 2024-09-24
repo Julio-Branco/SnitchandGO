@@ -3,18 +3,12 @@ import { Navbar } from "../components/Navbar";
 import { ProfileInfo } from "../components/ProfileInfo";
 import data from "../Data/Data.json";
 
-function Picture(props) {
-  return (
-    <img
-      src={props.ProfilePic}
-      alt="profile picture"
-      className="ProfilePicture"
-    />
-  );
+function GetUserID(id) {
+  return data.personnes[id];
 }
-const firstperson = data.personnes[0];
 
-function Profile() {
+function Profile(props) {
+  const firstperson = GetUserID(props.id);
   return (
     <>
       <Navbar />

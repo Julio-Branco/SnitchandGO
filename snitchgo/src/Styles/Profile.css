@@ -26,17 +26,28 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+.secondLine {
+  margin-top: 5%;
+}
 
 .ProfileName,
 .ProfilefName,
-.ProfileScore {
+.ProfileScore,
+.ProfileReport {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #7b7b7b;
   color: #eaeaeb;
   width: 20%;
-  height: 5dvh;
+  height: 8dvh;
   border-radius: 16px;
-  border-radius: 2px solid #4b4b4c;
+  border: 2px solid #4b4b4c;
+  box-shadow: 0px 5px 5px #4b4b4c;
+}
+
+.ProfileReport:hover {
+  background-color: #4b4b4c;
+  color: #7b7b7b;
+  cursor: pointer;
 }
