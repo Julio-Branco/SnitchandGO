@@ -9,12 +9,14 @@
     {
       "nom": "Martin",
       "prenom": "Lucie",
-      "score": -12
+      "score": -12,
+      "pp": "../img/Houdi.jpg"
     },
     {
       "nom": "Durand",
       "prenom": "Paul",
-      "score": 87
+      "score": 87,
+      "pp": "../img/epsi.png"
     },
     {
       "nom": "Moreau",

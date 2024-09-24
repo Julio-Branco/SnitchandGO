@@ -5,7 +5,11 @@ export const Home = () => {
     return (
         <>
             <Dashboard/>
-            <Ranking></Ranking>
+            <div className="row h-100 w-100">
+
+
+            </div>
+            
         </>
     )
 }
