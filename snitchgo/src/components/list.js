@@ -9,7 +9,7 @@ export default function list(){
     )
     function Item(){
         return (
-            <div className="flex">
+            <div className="flex-column" >
                 <div className="item">
                     <img src={data.personnes[0].pp} width={80} height={80} className="rounded-circle" alt="" />
 
@@ -19,6 +19,6 @@ export default function list(){
                     </div>
                 </div>
             </div>
-        )
+        )   
     }
 }
