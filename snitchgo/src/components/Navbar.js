@@ -27,6 +27,9 @@ export const Navbar = () => {
           <li className={`nav-item ${location.pathname === '/Classe' ? 'active' : ''}`}>
             <NavLink className="nav-link my-link" to="/Classe">Ma classe</NavLink>
           </li>
+          <li className={`nav-item ${location.pathname === '/Leaderboardrank' ? 'active' : ''}`}>
+            <NavLink className="nav-link my-link" to="/Leaderboardrank">Leaderboard</NavLink>
+          </li>
         </ul>
         <div className='me-4'>
           <a href="/Profile">
