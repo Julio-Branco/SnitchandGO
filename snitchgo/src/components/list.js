@@ -10,14 +10,17 @@ export default function list(){
     )
     function Item(){
         return (
-            <div className="flex" >
-                <div className="item">
-                    <img src={data.personnes[0].pp} width={80} height={80} className="rounded-circle" alt="" />
+            <div className="userCard">
+                <div className="picture">
+                    <img src={data.personnes[0].pp} className="rounded-circle" alt="" />
 
-                    <div className="info">
-                        <h3 className="nom text-dark">{data.personnes[0].prenom} {data.personnes[0].nom}</h3>
-                        <span>{data.personnes[0].score}</span>
-                    </div>
+                    
+                </div>
+                <div>
+                    <h2>{data.personnes[0].prenom} {data.personnes[0].nom}</h2>
+                </div>
+                <div>                    
+                    <h2>{data.personnes[0].score}</h2>
                 </div>
             </div>
         )   
