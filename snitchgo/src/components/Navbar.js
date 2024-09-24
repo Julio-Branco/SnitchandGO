@@ -9,7 +9,7 @@ export const Navbar = () => {
     <div className='navbar navbar-expand-lg navbar-light' style={{ background: '#EAEAEB', height: '11vh'}}>
       <div className="flex flex-row mx-3">
 
-        <a className='navbar-brand flex w-100 justify-content-between' href="/Home">
+        <a className='navbar-brand flex w-100 justify-content-between' href="/">
           <Logo className="mx-3" style={{ width: '45px' }} />
           <b>Snitch and Go</b>
         </a>
@@ -33,9 +33,9 @@ export const Navbar = () => {
         </ul>
         <div className='me-4'>
           <a href="/Profile">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#F7CF38" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#F7CF38" className="bi bi-person-circle" viewBox="0 0 16 16">
               <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
-              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+              <path fillRule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
             </svg>
           </a>
 
