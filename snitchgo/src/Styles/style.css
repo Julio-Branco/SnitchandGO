@@ -1,34 +1,36 @@
 .my-link {
-    background: #7B7B7B !important;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: white !important;
+	background: #7b7b7b !important;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	color: white !important;
 }
 
-.active>a {
-    background: #f43535 !important;
+.active > a {
+	background: #f43535 !important;
 }
 
 .main-btn {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #f43535;
-    color: #fff;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 0;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #f43535;
+	color: #fff;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	padding: 0;
 }
 
 .main-btn:hover {
-    background-color: #c32d2d;
+	background-color: #c32d2d;
 }
 
-
 .nav-item {
-    padding: 0 20px;
-    margin: 0 20px;
+	padding: 0 20px;
+	margin: 0 20px;
+}
+.profilebutton {
+	border: transparent;
 }
