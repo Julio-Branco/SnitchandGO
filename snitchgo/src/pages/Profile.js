@@ -17,7 +17,7 @@ function Profile() {
   return (
     <>
       <div className="profilePic">
-        <img src={firstperson.pp}></img>
+        <img src={firstperson.pp} className="rounded-circle"></img>
       </div>
     </>
   );
