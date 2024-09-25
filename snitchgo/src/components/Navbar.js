@@ -106,7 +106,7 @@ export const Navbar = () => {
 									></button>
 								</div>
 								<div className="modal-body">
-									<Profile id="2" />
+									<Profile id="0" />
 								</div>
 								<div className="modal-footer">
 									<button

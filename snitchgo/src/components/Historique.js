@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getReports, voteReport, dismissReport } from '../api/reports';
 import Report from './Report';
-import data from '../Data/Data.json';
 
 export default function Historique() {
     const [reports, setReports] = useState([]);
@@ -30,7 +29,7 @@ export default function Historique() {
         <>
         <h1>Dénonciations</h1>
         <hr className='w-100 d-flex justify-self-center' style={{ color: "#F43535" }} />
-        <div style={{ overflowY: 'scroll', height: '80%', padding: '20px', 'margin-bottom': '15px'}}>
+        <div style={{ overflowY: 'scroll', height: '80%', padding: '20px', 'marginBottom': '15px'}}>
             {reports.map((report, index) => (
                 <div key={index} style={{ marginBottom: '20px' }}>
                     <Report
@@ -42,8 +41,9 @@ export default function Historique() {
                         nbVote={report.nbVote}
                         cours={report.cours}
                         display={report.display}
-                        onDismiss={handleDismiss} // Pass the dismiss handler
-                        onVote={handleVote} // Pass the vote handler
+                        onDismiss={handleDismiss}
+                        onVote={handleVote}
+                        personId={report.personId}
                     />
                 </div>
             ))}
