@@ -64,11 +64,11 @@ export default function ClassList() {
 									></button>
 								</div>
 								<div className="modal-body">
-                <input class="form-control" id="exampleFormControlInput1" placeholder="Matière"></input>
+                <input className="form-control" id="exampleFormControlInput1" placeholder="Matière"></input>
 								</div>
-                <div class="form-group">
+                <div className="form-group">
                   <label for="exampleFormControlSelect1">Nom de l'élève</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
+                  <select className="form-control" id="exampleFormControlSelect1">
                   <option>1</option>
                   <option>2</option>
                   <option>3</option>
@@ -76,16 +76,16 @@ export default function ClassList() {
                   <option>5</option>
                   </select>
                 </div>
-                <div style="alignItems":"center">
-                <div class="form-check-inline">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
-                  <label class="form-check-label" for="exampleRadios1">
+                <div >
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="B" checked></input>
+                  <label className="form-check-label" for="exampleRadios1">
                     Retard
                   </label>
                 </div>
-                <div class="form-check-inline">
-                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"></input>
-                  <label class="form-check-label" for="exampleRadios2">
+                <div className="form-check form-check-inline">
+                  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="A"></input>
+                  <label className="form-check-label" for="exampleRadios2">
                     Absent
                   </label>
                 </div>
