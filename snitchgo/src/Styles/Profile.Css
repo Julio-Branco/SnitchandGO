@@ -1,0 +1,9 @@
+.profilePic {
+  margin-top: 2%;
+}
+
+.profilePic img {
+  width: 200px;
+  height: 200px;
+  border: 4px solid rgb(66, 69, 73);
+}
