@@ -3,14 +3,33 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 100%;
+  margin-top: 5%;
+}
+.UserStyle {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 60%;
+  background-color: #eaebeb;
+  border-radius: 16px;
+  height: 600px;
+  overflow-y: scroll;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .UserList {
-  width: 100%;
+  margin: 1%;
+  width: 90%;
+  height: 120px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
+  padding: 2%;
+}
+.UserList:hover {
+  background-color: #f7cf38;
+  border-radius: 4px;
 }
 .UserList h3 {
   display: flex;
@@ -19,6 +38,16 @@
   width: 20%;
 }
 
-.UserList:hover {
-  background-color: #f7cf38;
+.UserList button {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.ProfilePic {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 2px solid #4b4b4c;
 }
