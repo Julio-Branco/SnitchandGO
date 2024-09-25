@@ -51,3 +51,14 @@
   border-radius: 50%;
   border: 2px solid #4b4b4c;
 }
+.modal-body{
+
+  justify-content: center;
+}
+
+.form-control{
+  text-align: center;
+}
+.modal-footer{
+  justify-content: center;
+}

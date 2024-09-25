@@ -40,7 +40,7 @@ export default function ClassList() {
                 dénoncer
               </button>
               <div
-						className="modal fade"
+						className="modal fade background-color: #7b7b7b80;"
 						id="ModalReport"
 						tabIndex="-1"
 						aria-labelledby="profileModalLabel"
@@ -60,45 +60,41 @@ export default function ClassList() {
 									></button>
 								</div>
 								<div className="modal-body">
-                <input className="form-control" id="exampleFormControlInput1" placeholder="Matière"></input>
-								</div>
-                <div className="form-group">
-                  <label for="exampleFormControlSelect1">Nom de l'élève</label>
-                  <select className="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                  </select>
+                <div>
+                  <h6>Tu est en train de dénoncer : {personne.prenom} {personne.nom}</h6>
                 </div>
-                <div >
+                <input className="form-control" id="exampleFormControlInput1" placeholder="Matière"></input>
+                <h5 tyle={{"color":"gray"}}>Nature de l'abscence</h5>
+                <div className="radioButtonReport" >
+                  
                 <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="B" checked></input>
+                  <input className="form-check-input" type="radio" name="radioRetard" id="exampleRadios1" value="R" checked></input>
                   <label className="form-check-label" for="exampleRadios1">
                     Retard
                   </label>
                 </div>
                 <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="A"></input>
+                  <input className="form-check-input" type="radio" name="radioAbsent" id="exampleRadios2" value="A"></input>
                   <label className="form-check-label" for="exampleRadios2">
                     Absent
                   </label>
                 </div>
                 </div>
+                </div>
 	  						<div className="modal-footer">
-									<button
-										type="button"
-										className="btn btn-secondary"
-										data-bs-dismiss="modal"
-									>
-										Valider
-									</button>
-                  <button
-										type="button"
-										className="btn btn-secondary"
-										data-bs-dismiss="modal"
-									>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                      style={{"backgroundColor":"green"}}
+                    >
+                      Valider
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
 										Fermer
 									</button>
 								</div>
