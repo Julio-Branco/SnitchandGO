@@ -34,7 +34,7 @@ export default function Report(props) {
             display = 'none';
             break;
     }
-
+    
     const handleVote = async () => {
         await incrementScore(props.personId); // Call the API to increment the score
         props.onVote(props.id); // Call the parent component's onVote handler

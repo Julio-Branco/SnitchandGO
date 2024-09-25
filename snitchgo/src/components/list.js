@@ -1,13 +1,23 @@
 import "../Styles/List.css";
-import React from "react";
-import Data from "../Data/Data.json";
+import React, { useState, useEffect } from 'react';
+import { getPersonnes } from '../api/personnes'
 
 export default function List() {
-    const donneeOrganiser = [...Data.personnes].sort((a, b) => a.score - b.score)
+    const [personnes, setPersonnes] = useState([]);
+
+    useEffect(() => {
+        const fetchPersonnes = async () => {
+            const personnesData = await getPersonnes();
+            setPersonnes(personnesData);
+        };
+        fetchPersonnes();
+    }, []);
+
+    personnes.sort((a, b) => a.score - b.score)
 
     return (
         <div id="list">
-            {donneeOrganiser.map((value, index) => (
+            {personnes.map((value, index) => (
                 <div className="userCard" key={index}>
                     <div className="picture">
                         <h1>{index + 1}°</h1>
