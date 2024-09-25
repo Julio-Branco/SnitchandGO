@@ -18,14 +18,14 @@
       "id": 2,
       "nom": "Durand",
       "prenom": "Paul",
-      "score": 87,
+      "score": 102,
       "pp": "../img/epsi.png"
     },
     {
       "id": 3,
       "nom": "Moreau",
       "prenom": "Sophie",
-      "score": -10,
+      "score": 5,
       "pp": "../img/guido.jpg"
     },
     {
@@ -65,9 +65,9 @@
       "firstname": "Jones",
       "date": "2024-09-22 09:05:33",
       "typeReport": "R",
-      "nbVote": 2,
+      "nbVote": 3,
       "cours": "React",
-      "display": "y",
+      "display": "n",
       "personId": 2
     },
     {
@@ -76,9 +76,9 @@
       "firstname": "Brown",
       "date": "2024-09-21 16:45:12",
       "typeReport": "A",
-      "nbVote": 12,
+      "nbVote": 13,
       "cours": "Machine Learning",
-      "display": "y",
+      "display": "n",
       "personId": 3
     },
     {
