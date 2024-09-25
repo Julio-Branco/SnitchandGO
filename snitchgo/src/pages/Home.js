@@ -1,6 +1,7 @@
 import { Navbar } from "../components/Navbar"
 import Ranking from "../components/Ranking"
 import Historique from "../components/Historique"
+import ReportButton from "../components/ReportButton"
 
 export const Home = () => {
     return (
@@ -14,10 +15,9 @@ export const Home = () => {
                     <div className="col-6 my-4 h-75" style={{ background: "#EAEAEB", "borderRadius": '15px', 'boxShadow': 'rgba(0, 0, 0, 0.35) 0px 5px 15px' }}>
                         <Historique/>
                     </div>
-                    
+                        <ReportButton></ReportButton>
                 </div>
             </div >
-
         </>
     )
 }

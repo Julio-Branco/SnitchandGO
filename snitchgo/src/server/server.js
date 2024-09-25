@@ -40,6 +40,25 @@ app.post('/reports/dismiss', (req, res) => {
     }
 });
 
+app.get('/personnes', (req, res) => {
+    res.json(data.personnes);
+});
+
+app.put('/personnes/:id', (req, res) => {
+    const personId = parseInt(req.params.id);
+    const { score } = req.body;
+
+    const personneIndex = data.personnes.findIndex(p => p.id === personId);
+    if (personneIndex !== -1) {
+        data.personnes[personneIndex].score = score;
+
+        saveData();
+        res.status(200).send(data.personnes[personneIndex]);
+    } else {
+        res.status(404).send({ message: 'Person not found' });
+    }
+});
+
 const saveData = () => {
     fs.writeFileSync('../Data/Data.json', JSON.stringify(data, null, 2));
 };
