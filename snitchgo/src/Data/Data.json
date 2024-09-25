@@ -4,14 +4,14 @@
       "id": 0,
       "nom": "Dupont",
       "prenom": "Jean",
-      "score": 45,
+      "score": 90,
       "pp": "../img/shrok.jpg"
     },
     {
       "id": 1,
       "nom": "Martin",
       "prenom": "Lucie",
-      "score": -12,
+      "score": 33,
       "pp": "../img/Houdi.jpg"
     },
     {
@@ -25,7 +25,7 @@
       "id": 3,
       "nom": "Moreau",
       "prenom": "Sophie",
-      "score": -25,
+      "score": -10,
       "pp": "../img/guido.jpg"
     },
     {
@@ -43,9 +43,9 @@
       "firstname": "Doe",
       "date": "2024-09-24 11:10:45",
       "typeReport": "R",
-      "nbVote": 4,
+      "nbVote": 15,
       "cours": "Python",
-      "display": "y",
+      "display": "n",
       "personId": 0
     },
     {
@@ -54,9 +54,9 @@
       "firstname": "Smith",
       "date": "2024-09-23 14:15:20",
       "typeReport": "A",
-      "nbVote": 5,
+      "nbVote": 13,
       "cours": "JavaScript",
-      "display": "y",
+      "display": "n",
       "personId": 1
     },
     {
@@ -76,9 +76,9 @@
       "firstname": "Brown",
       "date": "2024-09-21 16:45:12",
       "typeReport": "A",
-      "nbVote": 7,
+      "nbVote": 12,
       "cours": "Machine Learning",
-      "display": "y",
+      "display": "n",
       "personId": 3
     },
     {
@@ -98,9 +98,9 @@
       "firstname": "Taylor",
       "date": "2024-09-19 10:20:35",
       "typeReport": "A",
-      "nbVote": 6,
+      "nbVote": 14,
       "cours": "Data Science",
-      "display": "y",
+      "display": "n",
       "personId": 0
     }
   ]
