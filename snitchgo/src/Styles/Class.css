@@ -18,3 +18,7 @@
   align-items: center;
   width: 20%;
 }
+
+.UserList:hover {
+  background-color: #f7cf38;
+}
