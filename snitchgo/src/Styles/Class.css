@@ -1,0 +1,20 @@
+.ClassContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.UserList {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+}
+.UserList h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
