@@ -12,3 +12,4 @@ export const voteReport = async (id) => {
 export const dismissReport = async (id) => {
     await axios.post('http://localhost:5001/reports/dismiss', { id });
 };
+
