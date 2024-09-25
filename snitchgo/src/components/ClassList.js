@@ -47,9 +47,9 @@ export default function ClassList() {
   };
 
   useEffect(() => {
-    SortUser();
     ConsoleShowUser();
   }, []);
+  SortUser();
 
   return (
     <>
