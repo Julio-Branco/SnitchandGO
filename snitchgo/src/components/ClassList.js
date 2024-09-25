@@ -1,19 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import data from "../Data/Data.json";
 import "../Styles/Class.css";
 
-const ClassListArray = [];
-
 export default function ClassList() {
+  // Use state to store ClassListArray so React will re-render when it's updated
+  const [ClassListArray, setClassListArray] = useState([]);
+
+  // Function to sort/populate the users
   const SortUser = () => {
     if (ClassListArray.length === 0) {
-      for (let i = 0; i < data.personnes.length; i++) {
-        ClassListArray.push(data.personnes[i]);
-      }
+      setClassListArray(data.personnes); // Directly set the array from the data
     }
   };
 
-  const ShowUser = () => {
+  // useEffect to ensure SortUser runs when the component mounts
+  useEffect(() => {
+    SortUser();
+  }, []); 
     return (
       <>
         <div className="UserStyle">
