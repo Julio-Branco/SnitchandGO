@@ -1,22 +1,20 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import data from "../Data/Data.json";
 import "../Styles/Class.css";
 
-export default function ClassList() {
-  // Use state to store ClassListArray so React will re-render when it's updated
-  const [ClassListArray, setClassListArray] = useState([]);
+const ClassListArray = [];
 
-  // Function to sort/populate the users
+export default function ClassList() {
+  
   const SortUser = () => {
     if (ClassListArray.length === 0) {
-      setClassListArray(data.personnes); // Directly set the array from the data
+      for (let i = 0; i < data.personnes.length; i++) {
+        ClassListArray.push(data.personnes[i]);
+      }
     }
   };
 
-  // useEffect to ensure SortUser runs when the component mounts
-  useEffect(() => {
-    SortUser();
-  }, []); 
+  const ShowUser = () => {
     return (
       <>
         <div className="UserStyle">
@@ -53,7 +51,7 @@ export default function ClassList() {
 							<div className="modal-content">
 								<div className="modal-header">
 									<h5 className="modal-title" id="profileModalLabel">
-										Balance ton absent
+										Balance ton collègue
 									</h5>
 									<button
 										type="button"
@@ -64,22 +62,21 @@ export default function ClassList() {
 								</div>
 								<div className="modal-body">
                 <div>
-                  <h6>Tu est en train de dénoncer : {personne.prenom} {personne.nom}</h6>
+                  <h6>Tu es en train de dénoncer : {personne.prenom} {personne.nom}</h6>
                 </div>
                 <input className="form-control" id="exampleFormControlInput1" placeholder="Matière"></input>
-                <h5 tyle={{"color":"gray"}}>Nature de l'abscence</h5>
+                <h5 tyle={{"color":"gray"}}>Raison :</h5>
                 <div className="radioButtonReport" >
-                  
                 <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name="radioRetard" id="exampleRadios1" value="R" checked></input>
-                  <label className="form-check-label" for="exampleRadios1">
+                  <input className="form-check-input" type="radio" name="radioDenonce" id="radioRetard" value="R"></input>
+                  <label className="form-check-label" for="radioRetard">
                     Retard
                   </label>
                 </div>
                 <div className="form-check form-check-inline">
-                  <input className="form-check-input" type="radio" name="radioAbsent" id="exampleRadios2" value="A"></input>
-                  <label className="form-check-label" for="exampleRadios2">
-                    Absent
+                  <input className="form-check-input" type="radio" name="radioDenonce" id="radioAbsent" value="A"></input>
+                  <label className="form-check-label" for="radioAbsent">
+                    Absence
                   </label>
                 </div>
                 </div>

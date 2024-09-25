@@ -39,7 +39,7 @@ export const Navbar = () => {
 						}`}
 					>
 						<NavLink className="nav-link my-link" to="/Home">
-							Home
+							Accueil
 						</NavLink>
 					</li>
 					<li
