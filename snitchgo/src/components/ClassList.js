@@ -111,7 +111,9 @@ export default function ClassList() {
 					</div>
             </div>
           ))}
+          
         </div>
+        
       </>
     );
   };
