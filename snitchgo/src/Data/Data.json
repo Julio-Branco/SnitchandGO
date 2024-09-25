@@ -43,9 +43,9 @@
       "firstname": "Doe",
       "date": "2024-09-24 11:10:45",
       "typeReport": "R",
-      "nbVote": 4,
+      "nbVote": 5,
       "cours": "Python",
-      "display": "y",
+      "display": "n",
       "personId": 0
     },
     {
@@ -54,9 +54,9 @@
       "firstname": "Smith",
       "date": "2024-09-23 14:15:20",
       "typeReport": "A",
-      "nbVote": 5,
+      "nbVote": 16,
       "cours": "JavaScript",
-      "display": "y",
+      "display": "n",
       "personId": 1
     },
     {
@@ -76,9 +76,9 @@
       "firstname": "Brown",
       "date": "2024-09-21 16:45:12",
       "typeReport": "A",
-      "nbVote": 7,
+      "nbVote": 8,
       "cours": "Machine Learning",
-      "display": "y",
+      "display": "n",
       "personId": 3
     },
     {
@@ -100,7 +100,7 @@
       "typeReport": "A",
       "nbVote": 6,
       "cours": "Data Science",
-      "display": "y",
+      "display": "n",
       "personId": 0
     }
   ]
