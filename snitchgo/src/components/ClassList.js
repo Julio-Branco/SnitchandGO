@@ -13,10 +13,6 @@ export default function ClassList() {
     }
   };
 
-  const ConsoleShowUser = () => {
-    console.log(ClassListArray);
-  };
-
   const ShowUser = () => {
     return (
       <>
@@ -46,9 +42,6 @@ export default function ClassList() {
     );
   };
 
-  useEffect(() => {
-    ConsoleShowUser();
-  }, []);
   SortUser();
 
   return (
