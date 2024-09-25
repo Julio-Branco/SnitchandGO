@@ -43,6 +43,72 @@ export default function ClassList() {
                 <div></div>
                 dénoncer
               </button>
+              <div
+						className="modal fade"
+						id="ModalReport"
+						tabIndex="-1"
+						aria-labelledby="profileModalLabel"
+						aria-hidden="true"
+					  >
+						<div className="modal-dialog">
+							<div className="modal-content">
+								<div className="modal-header">
+									<h5 className="modal-title" id="profileModalLabel">
+										Balance ton absent
+									</h5>
+									<button
+										type="button"
+										className="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"
+									></button>
+								</div>
+								<div className="modal-body">
+                <input class="form-control" id="exampleFormControlInput1" placeholder="Matière"></input>
+								</div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Nom de l'élève</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>
+                </div>
+                <div style="alignItems":"center">
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked></input>
+                  <label class="form-check-label" for="exampleRadios1">
+                    Retard
+                  </label>
+                </div>
+                <div class="form-check-inline">
+                  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2"></input>
+                  <label class="form-check-label" for="exampleRadios2">
+                    Absent
+                  </label>
+                </div>
+                </div>
+	  						<div className="modal-footer">
+									<button
+										type="button"
+										className="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Valider
+									</button>
+                  <button
+										type="button"
+										className="btn btn-secondary"
+										data-bs-dismiss="modal"
+									>
+										Fermer
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
             </div>
           ))}
         </div>
