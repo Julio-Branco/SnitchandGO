@@ -6,6 +6,7 @@
     border-radius: 50%;
     background-clip: padding-box;
     margin: 7px 0 0 5px;
+    border: 2px solid #000000;
 }
 .picture{
     display:flex;
