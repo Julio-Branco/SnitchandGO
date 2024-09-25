@@ -1,27 +1,24 @@
 import "../Styles/List.css";
-import React from 'react'
-import data from '../Data/Data.json';
+import React from "react";
+import Data from "../Data/Data.json";
 
-export default function list(){
+export default function List() {
+    const donneeOrganiser = [...Data.personnes].sort((a, b) => a.score - b.score)
+
     return (
         <div id="list">
-            {Item()}
+            {donneeOrganiser.map((value, index) => (
+                <div className="userCard" key={index}>
+                    <div className="picture">
+                        <h1>{index + 1}°</h1>
+                        <img src={value.pp} alt="Profile" />
+                    </div>
+                    <div className="userName">
+                        <h3>{value.prenom} {value.nom}</h3>
+                        <h2>{value.score}</h2>
+                    </div>
+                </div>
+            ))}
         </div>
-    )
-    function Item(){
-        return (
-            <div className="userCard">
-                <h1>1°</h1>
-                <div className="picture">
-                    <img src={data.personnes[0].pp} alt="" />
-
-                    
-                </div>
-                <div className="userName">
-                    <h3>{data.personnes[0].prenom} {data.personnes[0].nom}</h3>
-                    <h2>{data.personnes[0].score}</h2>
-                </div>
-            </div>
-        )   
-    }
+    );
 }
