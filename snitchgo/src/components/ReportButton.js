@@ -9,7 +9,7 @@ export default function ReportButton() {
     };
 
     return (
-        <div>
+        <div style={{"marginTop":'55px'}}>
             {}
             <img
                 src={"/img/ReportButton.png"}
