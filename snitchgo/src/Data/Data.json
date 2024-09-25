@@ -4,7 +4,7 @@
       "id": 0,
       "nom": "Dupont",
       "prenom": "Jean",
-      "score": 90,
+      "score": 120,
       "pp": "../img/shrok.jpg"
     },
     {
@@ -32,7 +32,7 @@
       "id": 4,
       "nom": "Lefevre",
       "prenom": "Emilie",
-      "score": 63,
+      "score": 78,
       "pp": "../img/Luther.jpg"
     }
   ],
@@ -43,7 +43,7 @@
       "firstname": "Doe",
       "date": "2024-09-24 11:10:45",
       "typeReport": "R",
-      "nbVote": 15,
+      "nbVote": 16,
       "cours": "Python",
       "display": "n",
       "personId": 0
@@ -67,7 +67,7 @@
       "typeReport": "R",
       "nbVote": 2,
       "cours": "React",
-      "display": "n",
+      "display": "y",
       "personId": 2
     },
     {
@@ -78,7 +78,7 @@
       "typeReport": "A",
       "nbVote": 12,
       "cours": "Machine Learning",
-      "display": "n",
+      "display": "y",
       "personId": 3
     },
     {
@@ -87,7 +87,7 @@
       "firstname": "Lee",
       "date": "2024-09-20 13:30:25",
       "typeReport": "R",
-      "nbVote": 5,
+      "nbVote": 6,
       "cours": "HTML & CSS",
       "display": "n",
       "personId": 4
@@ -98,7 +98,7 @@
       "firstname": "Taylor",
       "date": "2024-09-19 10:20:35",
       "typeReport": "A",
-      "nbVote": 14,
+      "nbVote": 15,
       "cours": "Data Science",
       "display": "n",
       "personId": 0

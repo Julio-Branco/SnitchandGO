@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { getReports, voteReport, dismissReport } from '../api/reports';
+import { getPersonnes } from '../api/personnes';
 import Report from './Report';
 
 export default function Historique() {
     const [reports, setReports] = useState([]);
+    const [personnes, setPersonnes] = useState([]);
 
     useEffect(() => {
         const fetchReports = async () => {
@@ -12,6 +14,8 @@ export default function Historique() {
         };
         fetchReports();
     }, []);
+
+    reports.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const handleDismiss = async (id) => {
         await dismissReport(id);
@@ -22,7 +26,9 @@ export default function Historique() {
     const handleVote = async (id) => {
         await voteReport(id);
         const updatedReports = await getReports();
+        const updatedPersonnes = await getPersonnes();
         setReports(updatedReports); 
+        setPersonnes(updatedPersonnes);
     };
 
     return (
