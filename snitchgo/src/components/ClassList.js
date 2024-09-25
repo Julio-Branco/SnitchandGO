@@ -26,7 +26,11 @@ export default function ClassList() {
               <img key={index} src={personne.pp} className="ProfilePic"></img>
               <h3 key={index}>{personne.nom}</h3>
               <h3 key={index}>{personne.prenom}</h3>
-              <button className=" btn btn-danger reportButton">
+              <button 
+              className=" btn btn-danger reportButton" 
+              data-bs-toggle="modal"
+              data-bs-target="#ModalReport"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"

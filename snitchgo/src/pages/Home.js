@@ -16,9 +16,6 @@ export const Home = () => {
                         <Historique/>
                         <ReportButton/> 
                     </div>
-                    
-                    
-                    
                 </div>
             </div >
         </>
