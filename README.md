@@ -158,27 +158,10 @@ erDiagram
         string nom_stat
     }
 
-    Denoncer {
-        int id_elev
-        int id_reta
-    }
-    
-    Subir {
-        int id_reta
-        int id_deno
-    }
-    
-    Evoluer {
-        int id_deno
-        int id_statut
-    }
-
     Classe ||--o{ Eleve : "Appartenir"
     Eleve ||--o{ Retardataire_Absent : "Denoncer"
     Eleve ||--o{ Denonciation : "Subir"
     Denonciation ||--o{ Statut : "Evoluer"
-
-
 ```
 
 Le fichier JSON lui, se compose de deux éléments :
