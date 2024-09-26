@@ -1,22 +1,17 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Getting Started with Snitch & Go
 
 ## Available Scripts
 
-In the project directory, you can run:
+Pour lancer le projet il faut effectuer :\
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Lance l'application en mode développement.\
+Ouvrez [http://localhost:3000](http://localhost:3000) pour lancer la page web.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `cd src/server/ -> node server.js`
 
-### `node src/server/server.js`
-
-Runs the server needed to use the app.\
+Lancez le server pour faire fonctionner l'application.\
 
 # Présentation
 
@@ -125,49 +120,43 @@ La base de données Firebase se compose de 5 tables :
 - Statut (La table représentant le statut d’une dénonciation, soit Vrai, soit Faux)
 
 ```mermaid
-%%{ init: { "theme": "default", "flowchart": { "curve": "linear" } } }%%
 erDiagram
-    CLASSE {
+    Classe {
         int id_clas
         string nom_clas
     }
     
-    ELEVE {
+    Eleve {
         int id_elev
         string nom_elev
         string prenom_elev
         string email_elev
         string mdp_elev
-        int score_elev
+        float score_elev
+        int id_clas
     }
 
-    RETARDATAIRE_ABSENT {
+    Retardataire_Absent {
         int id_reta
         string nom_reta
         string prenom_reta
-        int id_classe
     }
-
-    DENONCIATION {
+    
+    Denonciation {
         int id_deno
-        int id_elev
-        int id_reta
         date date_deno
         string type_deno
     }
-
-    STATUT {
+    
+    Statut {
         int id_statut
         string nom_stat
-        int id_deno
     }
 
-    %% Relationships
-    CLASSE ||--o{ ELEVE : "Appartenir"
-    ELEVE ||--o{ DENONCIATION : "Denoncer"
-    RETARDATAIRE_ABSENT ||--o{ DENONCIATION : "Subir"
-    DENONCIATION ||--o{ STATUT : "Evoluer"
-
+    Classe ||--o{ Eleve : "Appartenir"
+    Eleve ||--o{ Retardataire_Absent : "Denoncer"
+    Eleve ||--o{ Denonciation : "Subir"
+    Denonciation ||--o{ Statut : "Evoluer"
 ```
 
 Le fichier JSON lui, se compose de deux éléments :
