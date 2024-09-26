@@ -125,48 +125,59 @@ La base de données Firebase se compose de 5 tables :
 - Statut (La table représentant le statut d’une dénonciation, soit Vrai, soit Faux)
 
 ```mermaid
-%%{ init: { "theme": "default", "flowchart": { "curve": "linear" } } }%%
 erDiagram
-    CLASSE {
+    Classe {
         int id_clas
         string nom_clas
     }
     
-    ELEVE {
+    Eleve {
         int id_elev
         string nom_elev
         string prenom_elev
         string email_elev
         string mdp_elev
-        int score_elev
+        float score_elev
+        int id_clas
     }
 
-    RETARDATAIRE_ABSENT {
+    Retardataire_Absent {
         int id_reta
         string nom_reta
         string prenom_reta
-        int id_classe
     }
-
-    DENONCIATION {
+    
+    Denonciation {
         int id_deno
-        int id_elev
-        int id_reta
         date date_deno
         string type_deno
     }
-
-    STATUT {
+    
+    Statut {
         int id_statut
         string nom_stat
-        int id_deno
     }
 
-    %% Relationships
-    CLASSE ||--o{ ELEVE : "Appartenir"
-    ELEVE ||--o{ DENONCIATION : "Denoncer"
-    RETARDATAIRE_ABSENT ||--o{ DENONCIATION : "Subir"
-    DENONCIATION ||--o{ STATUT : "Evoluer"
+    Denoncer {
+        int id_elev
+        int id_reta
+    }
+    
+    Subir {
+        int id_reta
+        int id_deno
+    }
+    
+    Evoluer {
+        int id_deno
+        int id_statut
+    }
+
+    Classe ||--o{ Eleve : "Appartenir"
+    Eleve ||--o{ Retardataire_Absent : "Denoncer"
+    Eleve ||--o{ Denonciation : "Subir"
+    Denonciation ||--o{ Statut : "Evoluer"
+
 
 ```
 
