@@ -13,13 +13,14 @@ export default function Historique() {
             setReports(reportsData);
         };
         fetchReports();
-    }, []);
+    }, [reports]);
 
     reports.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     const handleDismiss = async (id) => {
         await dismissReport(id);
         const updatedReports = await getReports();
+        console.log(updatedReports)
         setReports(updatedReports); 
     };
 

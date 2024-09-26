@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const port = 5001; // Choose a port
+const path = require('path');
 
 app.use(cors()); // Enable CORS
 app.use(bodyParser.json()); // Parse JSON bodies
@@ -28,15 +29,34 @@ app.post('/reports/vote', (req, res) => {
     }
 });
 
+app.post('/reports/add', (req, res) => {
+    const newReport = req.body;
+    console.log(newReport);
+
+    if (!newReport || !newReport.name || !newReport.firstname) {
+        return res.status(400).json({ error: 'Missing required fields' });
+    }
+
+    data.reports.push(newReport);
+    
+    saveData();
+
+    res.status(201).json({ message: 'Report added successfully', report: newReport });
+});
+
+
 app.post('/reports/dismiss', (req, res) => {
     const { id } = req.body;
     const report = data.reports.find(r => r.id === id);
     if (report) {
         report.display = 'n'; // Change display to 'n'
-        saveData();
-        res.sendStatus(200);
-    } else {
-        res.sendStatus(404);
+        console.log(`Report dismissed: ${JSON.stringify(report)}`); // Log the updated report
+
+        saveData(); // Save the updated data synchronously
+        res.sendStatus(200); // Respond only after save completes
+    } else {        
+        console.log(`Report with id ${id} not found`); // Log if not found
+        res.sendStatus(404); // Respond with 404 if not found
     }
 });
 
@@ -60,7 +80,13 @@ app.put('/personnes/:id', (req, res) => {
 });
 
 const saveData = () => {
-    fs.writeFileSync('../Data/Data.json', JSON.stringify(data, null, 2));
+    try {
+        const filePath = path.join(__dirname, '..', 'Data', 'Data.json');
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+        console.log('Data saved successfully');
+    } catch (error) {
+        console.error('Error saving data:', error); 
+    }
 };
 
 app.listen(port, () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getPersonnes, incrementScore } from '../api/personnes';
+import {incrementScore } from '../api/personnes';
 
 
 export default function Report(props) {
@@ -34,7 +34,7 @@ export default function Report(props) {
             display = 'none';
             break;
     }
-    
+
     const handleVote = async () => {
         await incrementScore(props.personId); // Call the API to increment the score
         props.onVote(props.id); // Call the parent component's onVote handler
@@ -51,7 +51,7 @@ export default function Report(props) {
                 <div className="card-body" style={{ "boxShadow": 'rgba(0, 0, 0, 0.35) 0px 5px 45px' }}>
                     <h5 className="card-title">{nomCommun}, {typeReport}</h5>
                     <p className="card-text">
-                        {nomCommun} à été {typeReport} le {date} à {heure} 
+                        {nomCommun} à été {typeReport} le {date} à {heure}
                     </p>
                     <div className="d-flex flex-row justify-content-around p-2 rounded">
                         <button className="main-btn" id="addVote" onClick={handleVote} data-bs-toggle="tooltip" data-bs-title="Ajouter un vote">
