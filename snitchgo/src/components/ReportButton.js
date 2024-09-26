@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { getReports, addReport } from '../api/reports';  // Fetch reports from the API
 import { getPersonnes } from '../api/personnes';  // Fetch personnes from the API
 
-export default function ReportButton() {
+export default function ReportButton(props) {
     const [reports, setReports] = useState([]);
     const [personnes, setPersonnes] = useState([]);
-    const [selectedPersonId, setSelectedPersonId] = useState('');
+    const [selectedPersonId, setSelectedPersonId] = useState(props.index ? props.index : '');
     const [matiere, setMatiere] = useState('');
     const [typeReport, setTypeReport] = useState('');
+
+    const uniqueModalId = `ModalReportPopup-${props.index}`;
 
     // Fetch reports and personnes when the component mounts
     useEffect(() => {
@@ -16,9 +18,13 @@ export default function ReportButton() {
             const fetchedPersonnes = await getPersonnes();
             setReports(fetchedReports);
             setPersonnes(fetchedPersonnes);
+
+            if (props.index) {
+                setSelectedPersonId(props.index)
+            }
         };
         fetchData();
-    }, []);
+    }, [props.fullName, selectedPersonId]);  // Ensure selectedPersonId is included in the dependency array
 
     // Helper function to get the last report ID
     const getLastReportId = () => {
@@ -44,10 +50,16 @@ export default function ReportButton() {
         };
 
         try {
-            const response = await addReport(newReport);
+            await addReport(newReport);
+
+            // Reset the form fields after successful submission
+            setSelectedPersonId('');
+            setMatiere('');
+            setTypeReport('');
+
         } catch (error) {
             console.error('Error adding the report:', error);
-        
+
             // Safely access error response data
             if (error.response) {
                 console.error('Error response data:', error.response.data);
@@ -59,21 +71,20 @@ export default function ReportButton() {
                 console.error('Error setting up request:', error.message);
             }
         }
-        
     };
 
     return (
-        <div style={{ marginTop: '55px' }}>
+        <div style={props.style}>
             <img
                 src={"/img/ReportButton.png"}
                 alt="Report Button"
                 style={{ cursor: 'pointer', width: '100px', height: '100px' }}
                 data-bs-toggle="modal"
-                data-bs-target="#ModalReportPopup"
+                data-bs-target={`#${uniqueModalId}`}  // Reference the unique modal ID
             />
             <div
                 className="modal fade"
-                id="ModalReportPopup"
+                id={uniqueModalId}  // Assign the unique ID here
                 tabIndex="-1"
                 aria-labelledby="profileModalLabel"
                 aria-hidden="true"
@@ -96,15 +107,30 @@ export default function ReportButton() {
                                 id="personSelect"
                                 className="form-control"
                                 value={selectedPersonId}
-                                onChange={(e) => setSelectedPersonId(e.target.value)}
+                                onChange={(e) => {
+                                    setSelectedPersonId(e.target.value);
+                                    console.log("New selectedPersonId:", e.target.value);
+                                }}
+                                disabled={!!props.fullName}
                             >
                                 <option disabled value="">Choisis l'élève</option>
-                                {personnes.map(person => (
-                                    <option key={person.id} value={person.id}>
-                                        {person.prenom} {person.nom}
-                                    </option>
-                                ))}
+                                {props.fullName ? (
+                                    personnes
+                                        .filter(person => person.id === props.index)
+                                        .map(person => (
+                                            <option key={person.id} value={person.id}>
+                                                {person.nom + " " + person.prenom}
+                                            </option>
+                                        ))
+                                ) : (
+                                    personnes.map(person => (
+                                        <option key={person.id} value={person.id}>
+                                            {person.prenom + " " + person.nom}
+                                        </option>
+                                    ))
+                                )}
                             </select>
+
                             <input
                                 className="form-control mt-2"
                                 id="matiere"
@@ -143,7 +169,7 @@ export default function ReportButton() {
                                 type="button"
                                 className="btn btn-secondary"
                                 style={{ backgroundColor: "green" }}
-                                onClick={handleSubmit}  // Call handleSubmit when "Valider" is clicked
+                                onClick={handleSubmit}
                                 data-bs-dismiss="modal"
                             >
                                 Valider

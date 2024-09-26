@@ -14,7 +14,7 @@ export const Home = () => {
                     </div>
                     <div className="col-6 my-4 h-75 rounded shadow" style={{ background: "#EAEAEB" }}>
                         <Historique />
-                        <ReportButton />
+                        <ReportButton style={{"marginTop": "55px"}}/>
                     </div>
                 </div>
             </div >

@@ -4,7 +4,7 @@
       "id": 0,
       "nom": "Dupont",
       "prenom": "Jean",
-      "score": 420,
+      "score": 435,
       "pp": "../img/shrok.jpg"
     },
     {
@@ -56,6 +56,17 @@
       "typeReport": "R",
       "nbVote": 2,
       "cours": "LOL",
+      "display": "n",
+      "personId": 0
+    },
+    {
+      "id": 1479,
+      "name": "Dupont",
+      "firstname": "Jean",
+      "date": "2024-09-26 14:19:19",
+      "typeReport": "A",
+      "nbVote": 2,
+      "cours": "Test",
       "display": "n",
       "personId": 0
     }
