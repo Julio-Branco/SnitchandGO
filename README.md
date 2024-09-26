@@ -1,22 +1,17 @@
 # Getting Started with Snitch & Go
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
-In the project directory, you can run:
+Pour lancer le projet il faut effectuer :\
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Lance l'application en mode développement.\
+Ouvrez [http://localhost:3000](http://localhost:3000) pour lancer la page web.
 
 ### `cd src/server/ -> node server.js`
 
-Runs the server needed to use the app.\
+Lancez le server pour faire fonctionner l'application.\
 
 # Présentation
 
