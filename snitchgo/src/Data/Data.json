@@ -4,35 +4,35 @@
       "id": 0,
       "nom": "Dupont",
       "prenom": "Jean",
-      "score": 435,
+      "score": -25,
       "pp": "../img/shrok.jpg"
     },
     {
       "id": 1,
       "nom": "Martin",
       "prenom": "Lucie",
-      "score": 48,
+      "score": -89,
       "pp": "../img/Houdi.jpg"
     },
     {
       "id": 2,
       "nom": "Durand",
       "prenom": "Paul",
-      "score": 117,
+      "score": -13,
       "pp": "../img/epsi.png"
     },
     {
       "id": 3,
       "nom": "Moreau",
       "prenom": "Sophie",
-      "score": 20,
+      "score": -69,
       "pp": "../img/guido.jpg"
     },
     {
       "id": 4,
       "nom": "Lefevre",
       "prenom": "Emilie",
-      "score": 93,
+      "score": -70,
       "pp": "../img/Luther.jpg"
     }
   ],
